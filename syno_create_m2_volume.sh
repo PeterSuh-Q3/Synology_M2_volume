@@ -493,15 +493,16 @@ getm2info(){
 
     #echo "/dev/${dev}" >&2  # debug
 
-    if [[ $all != "yes" ]]; then
-        # Skip listing M.2 drives detected as active
-        if grep -E "active.*${dev}" /proc/mdstat >/dev/null ; then
-            echo -e "${Cyan}Skipping drive as it is being used by DSM${Off}" >&2
-            echo "" >&2
-            #active="yes"
-            return
-        fi
-    fi
+    #block for nvmesystem addon 2024.05.13 PeterSuh-Q3
+    #if [[ $all != "yes" ]]; then
+    #    # Skip listing M.2 drives detected as active
+    #    if grep -E "active.*${dev}" /proc/mdstat >/dev/null ; then
+    #        echo -e "${Cyan}Skipping drive as it is being used by DSM${Off}" >&2
+    #        echo "" >&2
+    #        #active="yes"
+    #        return
+    #    fi
+    #fi
 
     if [[ -e /dev/${dev}p1 ]] && [[ -e /dev/${dev}p2 ]] &&\
             [[ -e /dev/${dev}p3 ]]; then
