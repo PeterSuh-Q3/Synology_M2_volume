@@ -63,11 +63,11 @@ jobs:
 
           export TERM=xterm
 
-          sudo ./localbuild.sh create rr/ws rr/rr.img
-          if [ $? -ne 0 ]; then
-            echo "create failed"
-            exit 1
-          fi
+          #sudo ./localbuild.sh create rr/ws rr/rr.img
+          #if [ $? -ne 0 ]; then
+          #  echo "create failed"
+          #  exit 1
+          #fi
 
       - name: Get data
         run: |
