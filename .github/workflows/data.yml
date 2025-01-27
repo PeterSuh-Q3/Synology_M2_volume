@@ -40,7 +40,8 @@ jobs:
 
       - name: Get Release RR
         run: |
-          REPO="${{ github.server_url }}/${{ github.repository }}"
+          REPO="https://github.com/RROrg/rr"
+          #REPO="${{ github.server_url }}/${{ github.repository }}"
           PRERELEASE="true"
 
           TAG=""
