@@ -36,7 +36,7 @@ jobs:
       - name: Delay
         run: |
           echo "Delaying for 1 minutes..."
-          sleep 60
+          sleep 2
 
       - name: Get Release RR
         run: |
